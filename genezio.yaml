@@ -2,12 +2,12 @@ backend:
     functions:
         - entry: server.js
           handler: handler
-          name: express
+          name: function-serverless-http
           path: .
-          type: httpServer
+          type: aws
     language:
         name: js
-    path: invbackend
+    path: ./invbackend/
     scripts:
         deploy:
             - npm install
