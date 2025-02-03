@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "./button";
+require('dotenv').config();
+
 import {
   Drawer,
   DrawerTrigger,
@@ -21,12 +23,17 @@ export const HoverEffect = ({ items, className }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [quantities, setQuantities] = useState({});
   const [currentTitle, setCurrentTitle] = useState("");
-
+  const apiurl = process.env.NEXT_PUBLIC_API_URL;
+ 
   useEffect(() => {
+    
+    console.log(apiurl);
     async function fetchQuantities() {
       try {
         console.log("2222222");
-        const response = await axios.get("http://localhost:3002/get-cigarettes");
+        
+        const response = await axios.get(`${apiurl}/get-cigarettes`);
+
         if (response.status === 200 && response.data) {
           console.log("Fetched Data:", response.data);
           setQuantities(response.data.reduce((acc, item) => {
@@ -55,7 +62,8 @@ export const HoverEffect = ({ items, className }) => {
   async function saveToDatabase(title, qty) {
     try {
       console.log("111111");
-      const response = await axios.post("http://localhost:3002/update-cigarette", {
+      
+      const response = await axios.post(`${apiurl}/update-cigarette`, {
         name: title,
         qty,
       });

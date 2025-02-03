@@ -247,6 +247,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$minus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Minus$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/minus.js [app-client] (ecmascript) <export default as Minus>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/plus.js [app-client] (ecmascript) <export default as Plus>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/axios/lib/axios.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_refresh__.signature();
@@ -254,6 +255,7 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
+__turbopack_require__("[project]/node_modules/dotenv/lib/main.js [app-client] (ecmascript)").config();
 ;
 ;
 ;
@@ -263,11 +265,13 @@ const HoverEffect = ({ items, className })=>{
     const [hoveredIndex, setHoveredIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [quantities, setQuantities] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({});
     const [currentTitle, setCurrentTitle] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const apiurl = ("TURBOPACK compile-time value", "http://localhost:3002");
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        console.log(apiurl);
         async function fetchQuantities() {
             try {
                 console.log("2222222");
-                const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("http://localhost:3002/get-cigarettes");
+                const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get(`${apiurl}/get-cigarettes`);
                 if (response.status === 200 && response.data) {
                     console.log("Fetched Data:", response.data);
                     setQuantities(response.data.reduce((acc, item)=>{
@@ -292,7 +296,7 @@ const HoverEffect = ({ items, className })=>{
     async function saveToDatabase(title, qty) {
         try {
             console.log("111111");
-            const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("http://localhost:3002/update-cigarette", {
+            const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(`${apiurl}/update-cigarette`, {
                 name: title,
                 qty
             });
@@ -339,12 +343,12 @@ const HoverEffect = ({ items, className })=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                        lineNumber: 89,
+                                        lineNumber: 97,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                    lineNumber: 87,
+                                    lineNumber: 95,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Card, {
@@ -352,23 +356,23 @@ const HoverEffect = ({ items, className })=>{
                                         children: item.title
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                        lineNumber: 105,
+                                        lineNumber: 113,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                    lineNumber: 104,
+                                    lineNumber: 112,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                            lineNumber: 82,
+                            lineNumber: 90,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                        lineNumber: 81,
+                        lineNumber: 89,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$drawer$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DrawerContent"], {
@@ -381,20 +385,20 @@ const HoverEffect = ({ items, className })=>{
                                             children: item.title
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                            lineNumber: 112,
+                                            lineNumber: 120,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$drawer$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DrawerDescription"], {
                                             children: "Adjust quantity"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                            lineNumber: 113,
+                                            lineNumber: 121,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                    lineNumber: 111,
+                                    lineNumber: 119,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -413,7 +417,7 @@ const HoverEffect = ({ items, className })=>{
                                                         className: "h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                        lineNumber: 124,
+                                                        lineNumber: 132,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -421,13 +425,13 @@ const HoverEffect = ({ items, className })=>{
                                                         children: "Decrease"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                        lineNumber: 125,
+                                                        lineNumber: 133,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                lineNumber: 117,
+                                                lineNumber: 125,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -438,7 +442,7 @@ const HoverEffect = ({ items, className })=>{
                                                         children: quantities[item.title] || 0
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                        lineNumber: 128,
+                                                        lineNumber: 136,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -446,13 +450,13 @@ const HoverEffect = ({ items, className })=>{
                                                         children: "Quantity"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                        lineNumber: 131,
+                                                        lineNumber: 139,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                lineNumber: 127,
+                                                lineNumber: 135,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -465,7 +469,7 @@ const HoverEffect = ({ items, className })=>{
                                                         className: "h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                        lineNumber: 141,
+                                                        lineNumber: 149,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -473,24 +477,24 @@ const HoverEffect = ({ items, className })=>{
                                                         children: "Increase"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                        lineNumber: 142,
+                                                        lineNumber: 150,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                lineNumber: 135,
+                                                lineNumber: 143,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                        lineNumber: 116,
+                                        lineNumber: 124,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                    lineNumber: 115,
+                                    lineNumber: 123,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$drawer$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DrawerFooter"], {
@@ -500,7 +504,7 @@ const HoverEffect = ({ items, className })=>{
                                             children: "Submit"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                            lineNumber: 147,
+                                            lineNumber: 155,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$drawer$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DrawerClose"], {
@@ -510,40 +514,40 @@ const HoverEffect = ({ items, className })=>{
                                                 children: "Cancel"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                lineNumber: 153,
+                                                lineNumber: 161,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                            lineNumber: 152,
+                                            lineNumber: 160,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                    lineNumber: 146,
+                                    lineNumber: 154,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                            lineNumber: 110,
+                            lineNumber: 118,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                        lineNumber: 109,
+                        lineNumber: 117,
                         columnNumber: 11
                     }, this)
                 ]
             }, idx, true, {
                 fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                lineNumber: 80,
+                lineNumber: 88,
                 columnNumber: 9
             }, this))
     }, void 0, false, {
         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-        lineNumber: 73,
+        lineNumber: 81,
         columnNumber: 5
     }, this);
 };
@@ -559,17 +563,17 @@ const Card = ({ className, children })=>{
                 children: children
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                lineNumber: 174,
+                lineNumber: 182,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-            lineNumber: 173,
+            lineNumber: 181,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-        lineNumber: 167,
+        lineNumber: 175,
         columnNumber: 5
     }, this);
 };
@@ -580,7 +584,7 @@ const CardTitle = ({ className, children })=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-        lineNumber: 183,
+        lineNumber: 191,
         columnNumber: 5
     }, this);
 };
