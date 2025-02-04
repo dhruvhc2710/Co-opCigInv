@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { cn } from "../../lib/utils";
 
 export const Imperial = ({ items, className }) => {
