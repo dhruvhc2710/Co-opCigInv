@@ -21,7 +21,7 @@ import axios from "axios";
 export const HoverEffect = ({ items, className }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [quantities, setQuantities] = useState({});
-  //const [currentTitle, setCurrentTitle] = useState("");
+  const [, setCurrentTitle] = useState("");
   const apiurl = process.env.NEXT_PUBLIC_API_URL;
  
   useEffect(() => {
