@@ -7,12 +7,21 @@ backend:
           type: aws
     language:
         name: js
-    path: ./invbackend/
+    path: .
     scripts:
         deploy:
             - npm install
         local:
             - npm install
+frontend:
+    path: inventory
+    publish: .next
+    scripts:
+        build:
+            - npm run build
+        deploy:
+            - npm install
+    subdomain: Co-opCigInv
 name: Co-opCigInv
 region: us-east-1
 yamlVersion: 2
