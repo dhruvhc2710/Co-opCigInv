@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 export default function CheckboxFilter({ filters, setFilters }) {
    /* const handleChange = (e) => {
       const { name, checked } = e.target;
