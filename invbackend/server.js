@@ -80,6 +80,29 @@ app.get("/get-cigarettes", async (req, res) => {
   }
 });
 
+app.get("/get-low-stock", async (req, res) => {
+  const { supplier } = req.query; // Get supplier from request
+
+  try {
+    await client.connect();
+    console.log("dbConnected");
+    const database = client.db("inventory");
+    const collection = database.collection("ciggarates");
+
+    // Fetch cigarettes under the given supplier where qty < 2
+    const cigarettes = await collection
+      .find({ supplier: supplier, qty: { $lt: 2 } })
+      .toArray();
+
+    res.status(200).json(cigarettes);
+  } catch (error) {
+    res.status(500).send("Error fetching low stock data: " + error.message);
+  } finally {
+    await client.close();
+  }
+});
+
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
