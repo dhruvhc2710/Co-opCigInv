@@ -83,19 +83,35 @@ app.get("/get-cigarettes", async (req, res) => {
 app.get("/get-low-stock", async (req, res) => {
   const { supplier } = req.query; // Get supplier from request
 
+  console.log("Requested supplier:", supplier);
+
+  // Supplier-to-brand mapping
+  const supplierBrands = {
+    Imperial: ["DuMaurier", "Viceroy", "Players", "John Players", "Pall Mall", "Marlboro", "Vogue", "Matinee"],
+    RBH: ["Belmont", "Next", "Philip Morris", "Number 7", "Rothmans", "Canadian Classics"],
+    Coremark: ["Export A", "MacDonald", "LD"]
+  };
+
+  if (!supplier || !supplierBrands[supplier]) {
+    return res.status(400).json({ error: "Invalid supplier" });
+  }
+
   try {
     await client.connect();
-    console.log("dbConnected");
-    const database = client.db("inventory");
-    const collection = database.collection("ciggarates");
+    console.log("DB Connected for Low Stock");
 
-    // Fetch cigarettes under the given supplier where qty < 2
-    const cigarettes = await collection
-      .find({ supplier: supplier, qty: { $lt: 2 } })
+    const database = client.db("inventory");
+    const collection = database.collection("cigarettes");
+
+    // Query only items belonging to the supplier and having qty < 2
+    const lowStockItems = await collection
+      .find({ name: { $in: supplierBrands[supplier] }, qty: { $lt: 2 } })
       .toArray();
 
-    res.status(200).json(cigarettes);
+    console.log("Low Stock Items for Supplier:", lowStockItems);
+    res.status(200).json(lowStockItems);
   } catch (error) {
+    console.error("Error fetching low stock data:", error.message);
     res.status(500).send("Error fetching low stock data: " + error.message);
   } finally {
     await client.close();

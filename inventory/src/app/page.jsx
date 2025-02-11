@@ -1,16 +1,25 @@
 "use client";
 import { useState } from "react";
 import { HoverEffect } from "../components/ui/card-hover-effect";
+import LowStockReport from "../components/ui/lowStockReport";
 
 export default function LandingPage() {
   const [selectedSupplier, setSelectedSupplier] = useState(null);
+  const [showReport, setShowReport] = useState(false);
 
   const handleSupplierClick = (supplier) => {
     setSelectedSupplier(supplier);
+    setShowReport(false); // Reset report state when a new supplier is selected
   };
 
   const handleBack = () => {
     setSelectedSupplier(null);
+    setShowReport(false);
+  };
+
+  const handleReport = () => {
+    console.log("qweqwe")
+    setShowReport(true); // Show the report when button is clicked
   };
 
   return (
@@ -31,19 +40,31 @@ export default function LandingPage() {
         </div>
       ) : (
         <div>
-          <button
-            onClick={handleBack}
-            className="mb-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Back to Suppliers
-          </button>
-          <button
-            onClick={handleBack}
-            className="mb-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Back to Suppliers
-          </button>
-          <HoverEffect items={getItemsForSupplier(selectedSupplier)} />
+          <div className="flex justify-between">
+            <div>
+              <button
+                onClick={handleBack}
+                className="mb-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Back to Suppliers
+              </button>
+            </div>
+            <div>
+              <button
+                onClick={handleReport}
+                className="mb-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Low Stock Report
+              </button>
+            </div>
+          </div>
+
+          {!showReport ? (
+            <HoverEffect items={getItemsForSupplier(selectedSupplier)} />
+          ) : (
+            
+            <LowStockReport smokeSupplier={selectedSupplier} />
+          )}
         </div>
       )}
     </div>

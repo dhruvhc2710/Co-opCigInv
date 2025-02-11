@@ -8,7 +8,7 @@
     "static/chunks/node_modules_framer-motion_dist_es_0f95db._.js",
     "static/chunks/node_modules_axios_lib_c4c49c._.js",
     "static/chunks/node_modules_32e7a5._.js",
-    "static/chunks/src_ad3df5._.js"
+    "static/chunks/src_5c7a2d._.js"
   ],
   "source": "dynamic"
 });
