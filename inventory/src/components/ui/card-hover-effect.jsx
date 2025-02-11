@@ -15,7 +15,7 @@ export const HoverEffect = ({ items, className }) => {
   const [filters, setFilters] = useState({ king: false, regular: false, size20: false, size25: false });
   const [, setCurrentTitle] = useState("");
   const apiurl = process.env.NEXT_PUBLIC_API_URL;
-
+  
   useEffect(() => {
     async function fetchQuantities() {
       try {
@@ -94,7 +94,7 @@ export const HoverEffect = ({ items, className }) => {
                   </Button>
                   <div className="flex-1 text-center">
                     <div className="text-7xl font-bold tracking-tighter">
-                      {quantities[`${item.title}-${filters.size20 ? "20" : "25"}-${filters.king ? "king" : "regular"}`] || 0}
+                      {(filters.king || filters.regular) && (filters.size20 || filters.size25) ? quantities[`${item.title}-${filters.size20 ? "20" : "25"}-${filters.king ? "king" : "regular"}`] || 0 : 0}
                     </div>
                     <div className="text-[0.70rem] uppercase text-muted-foreground">Quantity</div>
                   </div>

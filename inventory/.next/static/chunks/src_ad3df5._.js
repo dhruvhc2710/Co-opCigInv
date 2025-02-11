@@ -95,8 +95,6 @@ __turbopack_esm__({
     "default": (()=>CheckboxFilter)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-;
 ;
 function CheckboxFilter({ filters, setFilters }) {
     /* const handleChange = (e) => {
@@ -615,7 +613,7 @@ const HoverEffect = ({ items, className })=>{
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "text-7xl font-bold tracking-tighter",
-                                                        children: quantities[`${item.title}-${filters.size20 ? "20" : "25"}-${filters.king ? "king" : "regular"}`] || 0
+                                                        children: (filters.king || filters.regular) && (filters.size20 || filters.size25) ? quantities[`${item.title}-${filters.size20 ? "20" : "25"}-${filters.king ? "king" : "regular"}`] || 0 : 0
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
                                                         lineNumber: 96,
