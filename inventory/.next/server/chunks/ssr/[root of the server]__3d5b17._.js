@@ -244,6 +244,79 @@ function CheckboxFilter({ filters, setFilters }) {
     }, this);
 }
 }}),
+"[project]/src/components/ui/variantSelector.jsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: require } = __turbopack_context__;
+{
+__turbopack_esm__({
+    "default": (()=>VariantsSelector)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+;
+;
+function VariantsSelector({ variants }) {
+    if (!variants || !Array.isArray(variants)) return null; // Handle case where variants are undefined or not an array
+    const [selectedBrand, setSelectedBrand] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const handleRadioChange = (variant)=>{
+        setSelectedBrand(variant);
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                className: "text-lg font-bold mb-2 text-gray-900 dark:text-white",
+                children: "Select a variant"
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/variantSelector.jsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                children: variants.map((variant)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                        className: "flex items-center space-x-2",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                type: "radio",
+                                id: variant,
+                                name: "variant",
+                                checked: selectedBrand === variant,
+                                onChange: ()=>handleRadioChange(variant),
+                                className: "cursor-pointer"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/ui/variantSelector.jsx",
+                                lineNumber: 20,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                htmlFor: variant,
+                                className: "text-gray-900 dark:text-white cursor-pointer",
+                                children: variant
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/ui/variantSelector.jsx",
+                                lineNumber: 28,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, variant, true, {
+                        fileName: "[project]/src/components/ui/variantSelector.jsx",
+                        lineNumber: 19,
+                        columnNumber: 11
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/variantSelector.jsx",
+                lineNumber: 17,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/ui/variantSelector.jsx",
+        lineNumber: 13,
+        columnNumber: 5
+    }, this);
+}
+}}),
 "[project]/src/components/ui/drawer.jsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -475,6 +548,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/button.jsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$checkbox$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/checkbox.jsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$variantSelector$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/variantSelector.jsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$drawer$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/drawer.jsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/lib/utils.jsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-ssr] (ecmascript)");
@@ -483,6 +557,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/plus.js [app-ssr] (ecmascript) <export default as Plus>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/axios/lib/axios.js [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -501,15 +576,17 @@ const HoverEffect = ({ items, className })=>{
         size20: false,
         size25: false
     });
+    const [selectedVariant, setSelectedVariant] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(""); // Store the selected variant
     const [, setCurrentTitle] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const apiurl = ("TURBOPACK compile-time value", "http://localhost:3002");
+    // Fetch quantities when component mounts
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         async function fetchQuantities() {
             try {
                 const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].get(`${apiurl}/get-cigarettes`);
                 if (response.status === 200 && response.data) {
                     const newQuantities = response.data.reduce((acc, item)=>{
-                        const key = `${item.name}-${item.size}-${item.type}`; // Include type in the key
+                        const key = `${item.title}-${item.size}-${item.type}-${item.variant}`; // Include type and variant in the key
                         acc[key] = item.qty;
                         return acc;
                     }, {});
@@ -523,28 +600,38 @@ const HoverEffect = ({ items, className })=>{
     }, [
         apiurl
     ]);
-    function onClick(adjustment, title) {
+    function onClick(adjustment, item) {
         const size = filters.size20 ? "20" : filters.size25 ? "25" : "unknown";
         const type = filters.king ? "king" : filters.regular ? "regular" : "unknown";
-        const key = `${title}-${size}-${type}`;
-        setQuantities((prev)=>({
+        const variant = filters.variant || selectedVariant; // Use filters.variant directly or fall back to selectedVariant
+        const key = `${item.title}-${size}-${type}-${variant}`;
+        console.log("Key:", key); // Log the key being used
+        console.log("Previous quantities:", quantities);
+        // Ensure the key exists in the quantities state and adjust the quantity
+        setQuantities((prev)=>{
+            const newQty = Math.max(0, (prev[key] || 0) + adjustment); // Prevent negative values
+            console.log("Updated quantity:", newQty); // Log the updated quantity
+            return {
                 ...prev,
-                [key]: Math.max(0, (prev[key] || 0) + adjustment)
-            }));
+                [key]: newQty
+            };
+        });
     }
-    async function saveToDatabase(title) {
+    async function saveToDatabase(item) {
         const size = filters.size20 ? "20" : filters.size25 ? "25" : "unknown";
         const type = filters.king ? "king" : filters.regular ? "regular" : "unknown";
-        const key = `${title}-${size}-${type}`;
+        const variant = filters.variant || selectedVariant; // Ensure you're using the selected variant from the filters
+        const key = `${item.title}-${size}-${type}-${variant}`;
         const qty = quantities[key] || 0;
         try {
             await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(`${apiurl}/update-cigarette`, {
-                name: title,
+                title: item.title,
                 size,
                 type,
+                variant,
                 qty
             });
-            console.log(`Successfully saved ${title} ${size} ${type} with qty: ${qty}`);
+            console.log(`Successfully saved ${item.title} ${size} ${type} ${variant} with qty: ${qty}`);
         } catch (error) {
             console.error("Error saving data:", error.message);
         }
@@ -583,12 +670,12 @@ const HoverEffect = ({ items, className })=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                        lineNumber: 71,
+                                        lineNumber: 90,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                    lineNumber: 69,
+                                    lineNumber: 88,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Card, {
@@ -596,23 +683,23 @@ const HoverEffect = ({ items, className })=>{
                                         children: item.title
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                        lineNumber: 77,
+                                        lineNumber: 96,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                    lineNumber: 76,
+                                    lineNumber: 95,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                            lineNumber: 68,
+                            lineNumber: 87,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                        lineNumber: 67,
+                        lineNumber: 86,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$drawer$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DrawerContent"], {
@@ -625,28 +712,40 @@ const HoverEffect = ({ items, className })=>{
                                             children: item.title
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                            lineNumber: 84,
+                                            lineNumber: 103,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$drawer$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DrawerDescription"], {
                                             children: "Adjust quantity"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                            lineNumber: 85,
+                                            lineNumber: 104,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                    lineNumber: 83,
+                                    lineNumber: 102,
                                     columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$variantSelector$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    variants: item.variants,
+                                    selectedVariant: filters.variant,
+                                    onSelectVariant: (selected)=>setFilters({
+                                            ...filters,
+                                            variant: selected
+                                        })
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/ui/card-hover-effect.jsx",
+                                    lineNumber: 107,
+                                    columnNumber: 1
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$checkbox$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                     filters: filters,
                                     setFilters: setFilters
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                    lineNumber: 87,
+                                    lineNumber: 112,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -658,18 +757,18 @@ const HoverEffect = ({ items, className })=>{
                                                 variant: "outline",
                                                 size: "icon",
                                                 className: "h-8 w-8 shrink-0 rounded-full",
-                                                onClick: ()=>onClick(-1, item.title),
-                                                disabled: (quantities[`${item.title}-${filters.size20 ? "20" : "25"}-${filters.king ? "king" : "regular"}`] || 0) <= 0,
+                                                onClick: ()=>onClick(-1, item),
+                                                disabled: (quantities[`${item.title}-${filters.size20 ? "20" : "25"}-${filters.king ? "king" : "regular"}-${selectedVariant}`] || 0) <= 0,
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$minus$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Minus$3e$__["Minus"], {
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                    lineNumber: 93,
+                                                    lineNumber: 118,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                lineNumber: 90,
+                                                lineNumber: 115,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -677,10 +776,10 @@ const HoverEffect = ({ items, className })=>{
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "text-7xl font-bold tracking-tighter",
-                                                        children: (filters.king || filters.regular) && (filters.size20 || filters.size25) ? quantities[`${item.title}-${filters.size20 ? "20" : "25"}-${filters.king ? "king" : "regular"}`] || 0 : 0
+                                                        children: (filters.king || filters.regular) && (filters.size20 || filters.size25) && selectedVariant ? quantities[`${item.title}-${filters.size20 ? "20" : "25"}-${filters.king ? "king" : "regular"}-${selectedVariant}`] || 0 : 0
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                        lineNumber: 96,
+                                                        lineNumber: 121,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -688,51 +787,51 @@ const HoverEffect = ({ items, className })=>{
                                                         children: "Quantity"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                        lineNumber: 99,
+                                                        lineNumber: 126,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                lineNumber: 95,
+                                                lineNumber: 120,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                                                 variant: "outline",
                                                 size: "icon",
                                                 className: "h-8 w-8 shrink-0 rounded-full",
-                                                onClick: ()=>onClick(1, item.title),
+                                                onClick: ()=>onClick(1, item),
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                    lineNumber: 102,
+                                                    lineNumber: 129,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                lineNumber: 101,
+                                                lineNumber: 128,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                        lineNumber: 89,
+                                        lineNumber: 114,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                    lineNumber: 88,
+                                    lineNumber: 113,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$drawer$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DrawerFooter"], {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                            onClick: ()=>saveToDatabase(item.title),
+                                            onClick: ()=>saveToDatabase(item),
                                             children: "Submit"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                            lineNumber: 107,
+                                            lineNumber: 134,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$drawer$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DrawerClose"], {
@@ -742,40 +841,40 @@ const HoverEffect = ({ items, className })=>{
                                                 children: "Cancel"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                                lineNumber: 109,
+                                                lineNumber: 136,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                            lineNumber: 108,
+                                            lineNumber: 135,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                                    lineNumber: 106,
+                                    lineNumber: 133,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                            lineNumber: 82,
+                            lineNumber: 101,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                        lineNumber: 81,
+                        lineNumber: 100,
                         columnNumber: 11
                     }, this)
                 ]
             }, idx, true, {
                 fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                lineNumber: 66,
+                lineNumber: 85,
                 columnNumber: 9
             }, this))
     }, void 0, false, {
         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-        lineNumber: 64,
+        lineNumber: 83,
         columnNumber: 5
     }, this);
 };
@@ -789,17 +888,17 @@ const Card = ({ className, children })=>{
                 children: children
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-                lineNumber: 131,
+                lineNumber: 157,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-            lineNumber: 130,
+            lineNumber: 156,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-        lineNumber: 124,
+        lineNumber: 150,
         columnNumber: 5
     }, this);
 };
@@ -809,7 +908,7 @@ const CardTitle = ({ className, children })=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/ui/card-hover-effect.jsx",
-        lineNumber: 140,
+        lineNumber: 166,
         columnNumber: 5
     }, this);
 };
@@ -931,8 +1030,7 @@ function LandingPage() {
         setShowReport(false);
     };
     const handleReport = ()=>{
-        console.log("qweqwe");
-        setShowReport(true); // Show the report when button is clicked
+        setShowReport(true);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "max-w-5xl mx-auto px-8 py-10",
@@ -963,34 +1061,22 @@ function LandingPage() {
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex justify-between",
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: handleBack,
-                                className: "mb-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors",
-                                children: "Back to Suppliers"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/page.jsx",
-                                lineNumber: 45,
-                                columnNumber: 15
-                            }, this)
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            onClick: handleBack,
+                            className: "mb-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors",
+                            children: "Back to Suppliers"
                         }, void 0, false, {
                             fileName: "[project]/src/app/page.jsx",
                             lineNumber: 44,
                             columnNumber: 13
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: handleReport,
-                                className: "mb-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors",
-                                children: "Low Stock Report"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/page.jsx",
-                                lineNumber: 53,
-                                columnNumber: 15
-                            }, this)
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            onClick: handleReport,
+                            className: "mb-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors",
+                            children: "Low Stock Report"
                         }, void 0, false, {
                             fileName: "[project]/src/app/page.jsx",
-                            lineNumber: 52,
+                            lineNumber: 50,
                             columnNumber: 13
                         }, this)
                     ]
@@ -1003,13 +1089,13 @@ function LandingPage() {
                     items: getItemsForSupplier(selectedSupplier)
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.jsx",
-                    lineNumber: 63,
+                    lineNumber: 59,
                     columnNumber: 13
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$lowStockReport$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     smokeSupplier: selectedSupplier
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.jsx",
-                    lineNumber: 66,
+                    lineNumber: 61,
                     columnNumber: 13
                 }, this)
             ]
@@ -1026,170 +1112,51 @@ function LandingPage() {
 }
 const imperial = [
     {
-        title: "DuMaurier Smooth"
+        title: "DuMaurier",
+        variants: [
+            "Smooth",
+            "Signature",
+            "Mellow"
+        ]
     },
     {
-        title: "DuMaurier signature"
+        title: "Viceroy",
+        variants: [
+            "Blue",
+            "Red"
+        ]
     },
     {
-        title: "DuMaurier Mellow"
-    },
-    {
-        title: "DuMaurier distinct plus"
-    },
-    {
-        title: "DuMaurier distinct"
-    },
-    {
-        title: "DuMaurier special"
-    },
-    {
-        title: "Viceroy full"
-    },
-    {
-        title: "Players"
-    },
-    {
-        title: "Players smooth"
-    },
-    {
-        title: "Players original"
-    },
-    {
-        title: "John Players smooth"
-    },
-    {
-        title: "John Players mellow"
-    },
-    {
-        title: "John Players rich "
-    },
-    {
-        title: "John Players bold"
-    },
-    {
-        title: "Pall Mall smooth"
-    },
-    {
-        title: "Pall Mall smooth extra"
-    },
-    {
-        title: "Pall Mall Bold"
-    },
-    {
-        title: "Pall Mall Bold Extra"
-    },
-    {
-        title: "Pall Mall Full"
-    },
-    {
-        title: "Malboro"
-    },
-    {
-        title: "Malboro Original"
-    },
-    {
-        title: "Malboro Full"
-    },
-    {
-        title: "Malboro Select"
-    },
-    {
-        title: "Vogue"
-    },
-    {
-        title: "Matniee mellow"
-    },
-    {
-        title: "Matinee Subtle"
+        title: "Players",
+        variants: [
+            "Rich",
+            "Original"
+        ]
     }
 ];
 const rbh = [
     {
-        title: "Belmont"
+        title: "Belmont",
+        variants: [
+            "Mild",
+            "Strong"
+        ]
     },
     {
-        title: "Belmont select"
-    },
-    {
-        title: "Next smooth"
-    },
-    {
-        title: "Next select"
-    },
-    {
-        title: "Next original"
-    },
-    {
-        title: "Next xtra"
-    },
-    {
-        title: "Philip Morris special"
-    },
-    {
-        title: "Philip Morris Original"
-    },
-    {
-        title: "Number 7 special"
-    },
-    {
-        title: "Number 7 original"
-    },
-    {
-        title: "Rothmans"
-    },
-    {
-        title: "Rothmans special"
-    },
-    {
-        title: "Canadian Classics original"
-    },
-    {
-        title: "Canadian Classics smooth"
-    },
-    {
-        title: "Canadian Classics select"
-    },
-    {
-        title: "Canadian Classics rich"
+        title: "Next",
+        variants: [
+            "Blue",
+            "Gold"
+        ]
     }
 ];
 const coremark = [
     {
-        title: "Export A smooth"
-    },
-    {
-        title: "Export A rich"
-    },
-    {
-        title: "Export A medium"
-    },
-    {
-        title: "Export A fine"
-    },
-    {
-        title: "Export A full"
-    },
-    {
-        title: "Export A extra"
-    },
-    {
-        title: "MacDonald original"
-    },
-    {
-        title: "MacDonald rich"
-    },
-    {
-        title: "LD medium"
-    },
-    {
-        title: "LD smooth"
-    },
-    {
-        title: "LD bold"
-    },
-    {
-        title: "LD standard bold"
+        title: "Export A",
+        variants: [
+            "Red",
+            "Gold"
+        ]
     }
 ];
 const projects = [
@@ -1224,4 +1191,4 @@ var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_
 
 };
 
-//# sourceMappingURL=%5Broot%20of%20the%20server%5D__d6e081._.js.map
+//# sourceMappingURL=%5Broot%20of%20the%20server%5D__3d5b17._.js.map
